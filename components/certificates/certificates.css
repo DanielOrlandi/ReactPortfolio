@@ -1,0 +1,92 @@
+.certificate__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.certificate__container > div {
+    background-color: var(--color-bg-varient);
+    padding: 2rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.certificate__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.certificate__container > div h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+
+.certificate__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 2rem;
+}
+
+.certificate__details {
+    display: flex;
+    gap: 1rem;
+}
+
+.certificate__details-icon {
+    margin-top: 10px;
+    color: var(--color-primary);
+}
+
+.btn-certificate {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-bg-varient);
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+    background: var(--color-primary);
+    font-weight: bold;
+}
+
+.btn-certificate:hover {
+    background: var(--color-bg-varient);
+    color: var(--color-primary);
+    border-color: transparent;
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ===============*/
+@media screen and (max-width: 1024px) {
+    .certificate__container {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .certificate__containergit {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ===============*/
+@media screen and (max-width: 600px) {
+    .certificate__container {
+        gap: 1rem;
+    }
+
+    .certificate__container > div {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+}
